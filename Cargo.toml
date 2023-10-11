@@ -1,0 +1,13 @@
+[package]
+name = "near-keyconv"
+version = "0.1.0"
+edition = "2021"
+authors = ["Alexander Walter <alexander@ibexus.io>"]
+license = "MIT"
+
+
+[dependencies]
+near-seed-phrase = "0.3.2"
+clap = { version = "4.4", features = ["derive", "wrap_help"] }
+base58 = "0.2"
+anyhow = "1.0"
