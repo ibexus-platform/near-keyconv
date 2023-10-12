@@ -18,6 +18,12 @@ pub struct Config {
     ///
     /// When creating an item in 1Password, the vault name is required to define in which vault to create the item.
     pub vault: Option<String>,
+
+    #[arg(long)]
+    /// Account ID of the NEAR account associated with the key
+    ///
+    /// You can add an account id of a NEAR account to the key when adding it to 1Password. If you specify an account name, an additional field "Key Pair JSON" will be generated, which can be used to authenticale the NEAR CLI tool using 1Password.
+    pub account: Option<String>,
 }
 
 #[derive(Debug, clap::Args)]
@@ -38,6 +44,6 @@ pub struct Args {
     #[arg(long, requires = "vault")]
     /// Create an item in 1Password with the given name
     ///
-    /// Create an item in 1Password with seed, secret key and public key. Do not output anything. The 1Password CLI tool must be installed.
+    /// Create an item in 1Password with seed, secret key and public key. Do not output anything. The 1Password CLI tool must be installed. Specifying a vault to store the item in is required.
     pub create: Option<String>,
 }
