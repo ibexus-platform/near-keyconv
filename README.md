@@ -7,7 +7,7 @@ This is a CLI wrapper for the `near-seed-phrase` crate of [cornflower](https://c
 To be used as CLI tool, with integrated help using `clap`. To learn about all commands, use
 
 ```console
-ner-keyconv --help
+near-keyconv --help
 ```
 
 ## License
